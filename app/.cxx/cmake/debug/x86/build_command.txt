@@ -1,0 +1,24 @@
+                    Executable : W:\Android\cmake\3.22.1\bin\cmake.exe
+arguments : 
+-HV:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\jni
+-DCMAKE_FIND_ROOT_PATH=V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\.cxx\cmake\debug\prefab\x86\prefab
+-DCMAKE_BUILD_TYPE=Debug
+-DCMAKE_TOOLCHAIN_FILE=W:\Android\ndk\26.1.10909125\build\cmake\android.toolchain.cmake
+-DANDROID_ABI=x86
+-DANDROID_NDK=W:\Android\ndk\26.1.10909125
+-DANDROID_PLATFORM=android-24
+-DCMAKE_ANDROID_ARCH_ABI=x86
+-DCMAKE_ANDROID_NDK=W:\Android\ndk\26.1.10909125
+-DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\build\intermediates\cmake\debug\obj\x86
+-DCMAKE_RUNTIME_OUTPUT_DIRECTORY=V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\build\intermediates\cmake\debug\obj\x86
+-DCMAKE_MAKE_PROGRAM=W:\Android\cmake\3.22.1\bin\ninja.exe
+-DCMAKE_SYSTEM_NAME=Android
+-DCMAKE_SYSTEM_VERSION=24
+-BV:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\.cxx\cmake\debug\x86
+-GNinja
+jvmArgs : 
+
+
+                    Build command args: []
+                    Version: 1

@@ -1,0 +1,140 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.tencent.yolov8ncnn"
+4    android:versionCode="1"
+5    android:versionName="1.1" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="24"
+8-->V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="24" />
+9-->V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.CAMERA" />
+11-->V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:6:5-65
+11-->V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:6:22-62
+12
+13    <uses-feature android:name="android.hardware.camera2.full" />
+13-->V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:7:5-66
+13-->V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:7:19-63
+14    <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
+15    <!-- <uses-sdk android:minSdkVersion="14"/> -->
+16    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+16-->[com.google.android.datatransport:transport-backend-cct:3.1.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\52319493c48ba4f81b961ac79af578a6\transformed\jetified-transport-backend-cct-3.1.0\AndroidManifest.xml:25:5-79
+16-->[com.google.android.datatransport:transport-backend-cct:3.1.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\52319493c48ba4f81b961ac79af578a6\transformed\jetified-transport-backend-cct-3.1.0\AndroidManifest.xml:25:22-76
+17    <uses-permission android:name="android.permission.INTERNET" />
+17-->[com.google.android.datatransport:transport-backend-cct:3.1.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\52319493c48ba4f81b961ac79af578a6\transformed\jetified-transport-backend-cct-3.1.0\AndroidManifest.xml:26:5-67
+17-->[com.google.android.datatransport:transport-backend-cct:3.1.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\52319493c48ba4f81b961ac79af578a6\transformed\jetified-transport-backend-cct-3.1.0\AndroidManifest.xml:26:22-64
+18
+19    <application
+19-->V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:9:5-34:19
+20        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+20-->[androidx.core:core:1.8.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\a79ccc97c817d86347cfa8cc84a595b1\transformed\core-1.8.0\AndroidManifest.xml:24:18-86
+21        android:debuggable="true"
+22        android:extractNativeLibs="false"
+23        android:icon="@mipmap/app"
+23-->V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:10:13-39
+24        android:label="@string/app_name"
+24-->V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:11:13-45
+25        android:testOnly="true" >
+26        <activity
+26-->V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:13:9-22:20
+27            android:name="com.tencent.yolov8ncnn.MainActivity"
+27-->V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:13:19-46
+28            android:exported="true"
+28-->V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:14:19-42
+29            android:label="@string/app_name"
+29-->V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:16:19-51
+30            android:screenOrientation="portrait"
+30-->V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:17:19-55
+31            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+31-->V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:15:19-75
+32            <intent-filter>
+32-->V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:18:13-21:29
+33                <action android:name="android.intent.action.MAIN" />
+33-->V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:19:17-69
+33-->V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:19:25-66
+34
+35                <category android:name="android.intent.category.LAUNCHER" />
+35-->V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:20:17-77
+35-->V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:20:27-74
+36            </intent-filter>
+37        </activity>
+38        <activity
+38-->V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:23:9-25:20
+39            android:name="com.tencent.yolov8ncnn.PythonActivity"
+39-->V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:23:19-49
+40            android:exported="true" >
+40-->V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:24:19-42
+41        </activity>
+42        <activity
+42-->V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:26:9-28:20
+43            android:name="com.tencent.yolov8ncnn.handActivity"
+43-->V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:26:19-46
+44            android:exported="true" >
+44-->V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:27:9-32
+45        </activity>
+46        <activity
+46-->V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:29:9-32:20
+47            android:name="com.tencent.yolov8ncnn.Test.TestActivity"
+47-->V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:29:19-52
+48            android:exported="true"
+48-->V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:31:19-42
+49            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+49-->V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:30:19-75
+50        </activity>
+51
+52        <provider
+52-->[androidx.emoji2:emoji2:1.2.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\a1b06344d947e46dbaab22638522d700\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+53            android:name="androidx.startup.InitializationProvider"
+53-->[androidx.emoji2:emoji2:1.2.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\a1b06344d947e46dbaab22638522d700\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
+54            android:authorities="com.tencent.yolov8ncnn.androidx-startup"
+54-->[androidx.emoji2:emoji2:1.2.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\a1b06344d947e46dbaab22638522d700\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
+55            android:exported="false" >
+55-->[androidx.emoji2:emoji2:1.2.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\a1b06344d947e46dbaab22638522d700\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
+56            <meta-data
+56-->[androidx.emoji2:emoji2:1.2.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\a1b06344d947e46dbaab22638522d700\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+57                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+57-->[androidx.emoji2:emoji2:1.2.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\a1b06344d947e46dbaab22638522d700\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+58                android:value="androidx.startup" />
+58-->[androidx.emoji2:emoji2:1.2.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\a1b06344d947e46dbaab22638522d700\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+59            <meta-data
+59-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\GE gie gie\.gradle\caches\transforms-3\3cd99bad5397ecb1119a30ae501244c2\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+60                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+60-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\GE gie gie\.gradle\caches\transforms-3\3cd99bad5397ecb1119a30ae501244c2\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+61                android:value="androidx.startup" />
+61-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\GE gie gie\.gradle\caches\transforms-3\3cd99bad5397ecb1119a30ae501244c2\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+62        </provider>
+63
+64        <service
+64-->[com.google.android.datatransport:transport-backend-cct:3.1.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\52319493c48ba4f81b961ac79af578a6\transformed\jetified-transport-backend-cct-3.1.0\AndroidManifest.xml:29:9-35:19
+65            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+65-->[com.google.android.datatransport:transport-backend-cct:3.1.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\52319493c48ba4f81b961ac79af578a6\transformed\jetified-transport-backend-cct-3.1.0\AndroidManifest.xml:30:13-103
+66            android:exported="false" >
+66-->[com.google.android.datatransport:transport-backend-cct:3.1.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\52319493c48ba4f81b961ac79af578a6\transformed\jetified-transport-backend-cct-3.1.0\AndroidManifest.xml:31:13-37
+67            <meta-data
+67-->[com.google.android.datatransport:transport-backend-cct:3.1.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\52319493c48ba4f81b961ac79af578a6\transformed\jetified-transport-backend-cct-3.1.0\AndroidManifest.xml:32:13-34:39
+68                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+68-->[com.google.android.datatransport:transport-backend-cct:3.1.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\52319493c48ba4f81b961ac79af578a6\transformed\jetified-transport-backend-cct-3.1.0\AndroidManifest.xml:33:17-94
+69                android:value="cct" />
+69-->[com.google.android.datatransport:transport-backend-cct:3.1.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\52319493c48ba4f81b961ac79af578a6\transformed\jetified-transport-backend-cct-3.1.0\AndroidManifest.xml:34:17-36
+70        </service>
+71        <service
+71-->[com.google.android.datatransport:transport-runtime:3.1.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\db667e770f152f02fe0eec56b3657a82\transformed\jetified-transport-runtime-3.1.0\AndroidManifest.xml:26:9-30:19
+72            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+72-->[com.google.android.datatransport:transport-runtime:3.1.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\db667e770f152f02fe0eec56b3657a82\transformed\jetified-transport-runtime-3.1.0\AndroidManifest.xml:27:13-117
+73            android:exported="false"
+73-->[com.google.android.datatransport:transport-runtime:3.1.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\db667e770f152f02fe0eec56b3657a82\transformed\jetified-transport-runtime-3.1.0\AndroidManifest.xml:28:13-37
+74            android:permission="android.permission.BIND_JOB_SERVICE" >
+74-->[com.google.android.datatransport:transport-runtime:3.1.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\db667e770f152f02fe0eec56b3657a82\transformed\jetified-transport-runtime-3.1.0\AndroidManifest.xml:29:13-69
+75        </service>
+76
+77        <receiver
+77-->[com.google.android.datatransport:transport-runtime:3.1.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\db667e770f152f02fe0eec56b3657a82\transformed\jetified-transport-runtime-3.1.0\AndroidManifest.xml:32:9-34:40
+78            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+78-->[com.google.android.datatransport:transport-runtime:3.1.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\db667e770f152f02fe0eec56b3657a82\transformed\jetified-transport-runtime-3.1.0\AndroidManifest.xml:33:13-132
+79            android:exported="false" />
+79-->[com.google.android.datatransport:transport-runtime:3.1.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\db667e770f152f02fe0eec56b3657a82\transformed\jetified-transport-runtime-3.1.0\AndroidManifest.xml:34:13-37
+80    </application>
+81
+82</manifest>

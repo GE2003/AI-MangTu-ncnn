@@ -1,0 +1,14 @@
+# ninja log v5
+49	3458	7311660563532530	CMakeFiles/yolov8ncnn.dir/yolo.cpp.o	f9661c8ef3084521
+56	2679	7311660555844171	CMakeFiles/yolov8ncnn.dir/ndkcamera.cpp.o	8beded880d3de5b3
+43	2744	7311660556474166	CMakeFiles/yolov8ncnn.dir/yolov8ncnn.cpp.o	c557581ffdd4513c
+3458	4685	7311660575606064	V:/Desktop/Android/ncnn-android-yolov8-main/ncnn-android-yolov8/app/build/intermediates/cxx/Debug/e701q4y1/obj/x86_64/libyolov8ncnn.so	ea97418af1b0bc14
+77	2657	7311660555554163	CMakeFiles/mediapipehand.dir/ndkcamera.cpp.o	ecbcca1592958cb2
+0	13	0	clean	16155a5a07be0a82
+4	452	7313526865154706	build.ninja	66d118b439eabda2
+61	2880	7311660557524160	CMakeFiles/mediapipehand.dir/mediapipehand.cpp.o	42a182c7261e931d
+71	2771	7311660556714174	CMakeFiles/mediapipehand.dir/landmark.cpp.o	eda7919a0b3b7959
+65	3474	7311660563662517	CMakeFiles/mediapipehand.dir/hand.cpp.o	9ec253501bf91a13
+3474	4686	7311660575736060	V:/Desktop/Android/ncnn-android-yolov8-main/ncnn-android-yolov8/app/build/intermediates/cxx/Debug/e701q4y1/obj/x86_64/libmediapipehand.so	33993fc0969ee0ae
+1	739	7313526865154706	build.ninja	66d118b439eabda2
+0	13	0	clean	16155a5a07be0a82

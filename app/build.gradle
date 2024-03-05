@@ -1,0 +1,54 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.chaquo.python'
+
+android {
+    compileSdkVersion 33
+    buildToolsVersion "29.0.2"
+
+    defaultConfig {
+        applicationId "com.tencent.yolov8ncnn"
+        archivesBaseName = "$applicationId"
+
+        minSdkVersion 24
+        ndk { 
+            abiFilters "armeabi-v7a", "arm64-v8a", "x86", "x86_64"
+        }
+        python {
+
+            buildPython "C:\\Users\\GE gie gie\\AppData\\Local\\Programs\\Python\\Python39\\python.exe"
+
+        }
+    }
+
+    sourceSets {
+        main {
+            //jniLibs.srcDirs = ['libs']
+            jniLibs.srcDir 'src/main/jni'
+            python.srcDir "src/main/python"
+        }
+    }
+    externalNativeBuild {
+        cmake {
+            version "3.22.1"
+           path file('src/main/jni/CMakeLists.txt')
+        }
+    }
+
+    dependencies {
+        implementation 'androidx.appcompat:appcompat:1.5.1'
+        implementation 'com.google.android.material:material:1.7.0'
+        implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+
+
+        implementation group: 'com.google.mediapipe', name: 'hands', version: '0.10.10'
+
+        implementation group: 'com.google.mediapipe', name: 'solution-core', version: '0.10.10'
+    }
+    ndkVersion '26.1.10909125'
+
+}
+
+dependencies {
+    implementation 'androidx.exifinterface:exifinterface:1.3.3'
+}

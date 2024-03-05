@@ -1,0 +1,34 @@
+com.tencent.yolov8ncnn.app-constraintlayout-2.1.4-0 C:\Users\GE gie gie\.gradle\caches\transforms-3\108954814b30f76ccc1f0a284971c78c\transformed\constraintlayout-2.1.4\res
+com.tencent.yolov8ncnn.app-jetified-activity-1.5.1-1 C:\Users\GE gie gie\.gradle\caches\transforms-3\218f9620ac85450a89928a963c81e899\transformed\jetified-activity-1.5.1\res
+com.tencent.yolov8ncnn.app-cardview-1.0.0-2 C:\Users\GE gie gie\.gradle\caches\transforms-3\30579a9d4d53fda6d023fabc1006efff\transformed\cardview-1.0.0\res
+com.tencent.yolov8ncnn.app-jetified-lifecycle-process-2.4.1-3 C:\Users\GE gie gie\.gradle\caches\transforms-3\3cd99bad5397ecb1119a30ae501244c2\transformed\jetified-lifecycle-process-2.4.1\res
+com.tencent.yolov8ncnn.app-jetified-camera-core-1.0.0-beta10-4 C:\Users\GE gie gie\.gradle\caches\transforms-3\4def1f89823c80a41c9cb2aca06275c7\transformed\jetified-camera-core-1.0.0-beta10\res
+com.tencent.yolov8ncnn.app-jetified-startup-runtime-1.1.1-5 C:\Users\GE gie gie\.gradle\caches\transforms-3\5b4ee2d8051f1e21ad35d3f79ba74f46\transformed\jetified-startup-runtime-1.1.1\res
+com.tencent.yolov8ncnn.app-jetified-camera-camera2-1.0.0-beta10-6 C:\Users\GE gie gie\.gradle\caches\transforms-3\61c3905120339109c4775bfe77f0cd45\transformed\jetified-camera-camera2-1.0.0-beta10\res
+com.tencent.yolov8ncnn.app-lifecycle-viewmodel-2.5.1-7 C:\Users\GE gie gie\.gradle\caches\transforms-3\6c12a86d2a9e508656ea4b69abf7ed14\transformed\lifecycle-viewmodel-2.5.1\res
+com.tencent.yolov8ncnn.app-jetified-savedstate-1.2.0-8 C:\Users\GE gie gie\.gradle\caches\transforms-3\7854047c2d87dc0a202ebd3d50bbb9c7\transformed\jetified-savedstate-1.2.0\res
+com.tencent.yolov8ncnn.app-appcompat-1.5.1-9 C:\Users\GE gie gie\.gradle\caches\transforms-3\7e00fb1442ab16a3679f3a89cbee009c\transformed\appcompat-1.5.1\res
+com.tencent.yolov8ncnn.app-jetified-lifecycle-viewmodel-savedstate-2.5.1-10 C:\Users\GE gie gie\.gradle\caches\transforms-3\851c16f341993ee3ad0a41e89f640ab6\transformed\jetified-lifecycle-viewmodel-savedstate-2.5.1\res
+com.tencent.yolov8ncnn.app-fragment-1.3.6-11 C:\Users\GE gie gie\.gradle\caches\transforms-3\890e57246e30a0dc6cb1b5048adecbba\transformed\fragment-1.3.6\res
+com.tencent.yolov8ncnn.app-jetified-appcompat-resources-1.5.1-12 C:\Users\GE gie gie\.gradle\caches\transforms-3\8945b434633384c15ee9bcea39879cd4\transformed\jetified-appcompat-resources-1.5.1\res
+com.tencent.yolov8ncnn.app-coordinatorlayout-1.1.0-13 C:\Users\GE gie gie\.gradle\caches\transforms-3\8c540955a9ae583b077547c3e69cc13b\transformed\coordinatorlayout-1.1.0\res
+com.tencent.yolov8ncnn.app-jetified-viewpager2-1.0.0-14 C:\Users\GE gie gie\.gradle\caches\transforms-3\97a72717c1a1fd5149b0605293911147\transformed\jetified-viewpager2-1.0.0\res
+com.tencent.yolov8ncnn.app-jetified-emoji2-1.2.0-15 C:\Users\GE gie gie\.gradle\caches\transforms-3\a1b06344d947e46dbaab22638522d700\transformed\jetified-emoji2-1.2.0\res
+com.tencent.yolov8ncnn.app-jetified-annotation-experimental-1.1.0-16 C:\Users\GE gie gie\.gradle\caches\transforms-3\a434542a3e71c826b3bc7edea1b80b63\transformed\jetified-annotation-experimental-1.1.0\res
+com.tencent.yolov8ncnn.app-lifecycle-livedata-core-2.5.1-17 C:\Users\GE gie gie\.gradle\caches\transforms-3\a4702e3284bba3c66294ee8a46b814be\transformed\lifecycle-livedata-core-2.5.1\res
+com.tencent.yolov8ncnn.app-jetified-emoji2-views-helper-1.2.0-18 C:\Users\GE gie gie\.gradle\caches\transforms-3\a72906058400fbc9aadb50355d15d399\transformed\jetified-emoji2-views-helper-1.2.0\res
+com.tencent.yolov8ncnn.app-core-1.8.0-19 C:\Users\GE gie gie\.gradle\caches\transforms-3\a79ccc97c817d86347cfa8cc84a595b1\transformed\core-1.8.0\res
+com.tencent.yolov8ncnn.app-drawerlayout-1.1.1-20 C:\Users\GE gie gie\.gradle\caches\transforms-3\b198b5e9a572a01ea75dc8769b0366cd\transformed\drawerlayout-1.1.1\res
+com.tencent.yolov8ncnn.app-jetified-core-ktx-1.8.0-21 C:\Users\GE gie gie\.gradle\caches\transforms-3\b24eecd140724620480fe7fd12f6ec29\transformed\jetified-core-ktx-1.8.0\res
+com.tencent.yolov8ncnn.app-recyclerview-1.1.0-22 C:\Users\GE gie gie\.gradle\caches\transforms-3\b441b99a2d1311b6b7ef9735bbd9b11c\transformed\recyclerview-1.1.0\res
+com.tencent.yolov8ncnn.app-material-1.7.0-23 C:\Users\GE gie gie\.gradle\caches\transforms-3\cd2406403c3995320f0186a0b57789ff\transformed\material-1.7.0\res
+com.tencent.yolov8ncnn.app-lifecycle-runtime-2.5.1-24 C:\Users\GE gie gie\.gradle\caches\transforms-3\d42128cd4564f5101925ec2f78d0cd58\transformed\lifecycle-runtime-2.5.1\res
+com.tencent.yolov8ncnn.app-transition-1.2.0-25 C:\Users\GE gie gie\.gradle\caches\transforms-3\e34809eca63089c3eeace0c80ba2c10c\transformed\transition-1.2.0\res
+com.tencent.yolov8ncnn.app-pngs-26 V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\build\generated\res\pngs\debug
+com.tencent.yolov8ncnn.app-resValues-27 V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\build\generated\res\resValues\debug
+com.tencent.yolov8ncnn.app-rs-28 V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\build\generated\res\rs\debug
+com.tencent.yolov8ncnn.app-packageDebugResources-29 V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.tencent.yolov8ncnn.app-packageDebugResources-30 V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.tencent.yolov8ncnn.app-merged_res-31 V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\build\intermediates\merged_res\debug
+com.tencent.yolov8ncnn.app-debug-32 V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\debug\res
+com.tencent.yolov8ncnn.app-main-33 V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\res

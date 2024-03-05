@@ -1,0 +1,22 @@
+# ninja log v5
+7	2604	7313521802441374	CMakeFiles/yolov8ncnn.dir/yolov8ncnn.cpp.o	9200814d908e36c9
+651	3308	7312635254794184	CMakeFiles/mediapipehand.dir/mediapipehand.cpp.o	799b94783130c153
+929	3339	7312635255454174	CMakeFiles/mediapipehand.dir/landmark.cpp.o	6f60fe37b65f0092
+729	3820	7312635258452412	CMakeFiles/mediapipehand.dir/hand.cpp.o	f435cc0006c6dd43
+355	4429	7312635266423857	CMakeFiles/yolov8ncnn.dir/ndkcamera.cpp.o	2b1ac694291c4327
+283	5121	7312635273547880	CMakeFiles/yolov8ncnn.dir/yolo.cpp.o	45dbc8509a134852
+998	4430	7312635266433860	CMakeFiles/mediapipehand.dir/ndkcamera.cpp.o	f6313be9f34b281a
+5122	5396	7312635276017887	V:/Desktop/Android/ncnn-android-yolov8-main/ncnn-android-yolov8/app/build/intermediates/cxx/Debug/e701q4y1/obj/arm64-v8a/libyolov8ncnn.so	4e4635e6740b33f9
+4431	5411	7312635276307896	V:/Desktop/Android/ncnn-android-yolov8-main/ncnn-android-yolov8/app/build/intermediates/cxx/Debug/e701q4y1/obj/arm64-v8a/libmediapipehand.so	9f6d3e1ad166ec51
+6	2667	7313524238980387	CMakeFiles/yolov8ncnn.dir/landmark.cpp.o	310d08e666623bc7
+12	2950	7313524241696281	CMakeFiles/yolov8ncnn.dir/hand.cpp.o	452edf2ff740c386
+2950	3293	7313524244559174	V:/Desktop/Android/ncnn-android-yolov8-main/ncnn-android-yolov8/app/build/intermediates/cxx/Debug/e701q4y1/obj/arm64-v8a/libyolov8ncnn.so	6306ff538b663814
+9	2062	7313526414388744	CMakeFiles/yolov8ncnn.dir/yolov8ncnn.cpp.o	9200814d908e36c9
+2063	2328	7313526416941384	V:/Desktop/Android/ncnn-android-yolov8-main/ncnn-android-yolov8/app/build/intermediates/cxx/Debug/e701q4y1/obj/arm64-v8a/libyolov8ncnn.so	6306ff538b663814
+1	12	0	clean	16155a5a07be0a82
+83	3874	7313527092246749	CMakeFiles/yolov8ncnn.dir/landmark.cpp.o	310d08e666623bc7
+64	3955	7313527093077279	CMakeFiles/yolov8ncnn.dir/yolov8ncnn.cpp.o	9200814d908e36c9
+104	4098	7313527094583382	CMakeFiles/yolov8ncnn.dir/ndkcamera.cpp.o	2b1ac694291c4327
+120	4272	7313527096267391	CMakeFiles/yolov8ncnn.dir/hand.cpp.o	452edf2ff740c386
+20	4344	7313527096970101	CMakeFiles/yolov8ncnn.dir/yolo.cpp.o	45dbc8509a134852
+4344	4564	7313527099108300	V:/Desktop/Android/ncnn-android-yolov8-main/ncnn-android-yolov8/app/build/intermediates/cxx/Debug/e701q4y1/obj/arm64-v8a/libyolov8ncnn.so	6306ff538b663814

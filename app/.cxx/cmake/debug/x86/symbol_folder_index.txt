@@ -1,0 +1,1 @@
+V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\build\intermediates\cmake\debug\obj\x86

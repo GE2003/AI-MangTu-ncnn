@@ -1,0 +1,8 @@
+Executable : W:\Android\cmake\3.22.1\bin\ninja.exe
+arguments : 
+-C
+V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\.cxx\Debug\e701q4y1\x86_64
+mediapipehand
+yolov8ncnn
+jvmArgs : 
+

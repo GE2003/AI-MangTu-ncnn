@@ -1,0 +1,20 @@
+R_DEF: Internal format may change without notice
+local
+array cpugpu_array
+array model_array
+id buttonSwitchCamera
+id cameraview
+id preview
+id preview_main
+id spinnerCPUGPU
+id spinnerModel
+id start_camera
+id surfaceView
+layout activity_hand
+layout activity_python
+layout activity_test
+layout main
+mipmap app
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
