@@ -438,22 +438,22 @@ int Hand::detect(const cv::Mat& rgb, std::vector<PalmObject>& objects, float pro
         objects[i].hand_pos[3].x = (objects[i].hand_pos[3].x * target_size - (wpad / 2)) / scale;
         objects[i].hand_pos[3].y = (objects[i].hand_pos[3].y * target_size - (hpad / 2)) / scale;
 
-        //for (int j = 0; j < 7; j++)
-        //{
-        //    objects[i].landmarks[j].x = (objects[i].landmarks[j].x * target_size - (wpad / 2)) / scale;
-        //    objects[i].landmarks[j].y = (objects[i].landmarks[j].y * target_size - (hpad / 2)) / scale;
-        //}
+        for (int j = 0; j < 7; j++)
+        {
+            objects[i].landmarks[j].x = (objects[i].landmarks[j].x * target_size - (wpad / 2)) / scale;
+            objects[i].landmarks[j].y = (objects[i].landmarks[j].y * target_size - (hpad / 2)) / scale;
+        }
 
         cv::Point2f srcPts[4];
-        srcPts[0] = objects[i].hand_pos[0];
-        srcPts[1] = objects[i].hand_pos[1];
+      srcPts[0] = objects[i].hand_pos[0];
+       srcPts[1] = objects[i].hand_pos[1];
         srcPts[2] = objects[i].hand_pos[2];
         srcPts[3] = objects[i].hand_pos[3];
 
         cv::Point2f dstPts[4];
         dstPts[0] = cv::Point2f(0, 0);
-        dstPts[1] = cv::Point2f(224, 0);
-        dstPts[2] = cv::Point2f(224, 224);
+      dstPts[1] = cv::Point2f(224, 0);
+      dstPts[2] = cv::Point2f(224, 224);
         dstPts[3] = cv::Point2f(0, 224);
 
         cv::Mat trans_mat = cv::getAffineTransform(srcPts, dstPts);
@@ -470,50 +470,60 @@ int Hand::detect(const cv::Mat& rgb, std::vector<PalmObject>& objects, float pro
 
 int Hand::draw(cv::Mat& rgb, const std::vector<PalmObject>& objects)
 {
+
+
+
     for (int i = 0; i < objects.size(); i++)
     {
-        objects[i].trans_image.copyTo(rgb(cv::Rect(0,0,224,224)));
+        //objects[i].trans_image.copyTo(rgb(cv::Rect(0,0,224,224)));
         for(int j = 0; j < objects[i].skeleton.size(); j++)
         {
-            cv::Scalar color1(10, 215, 255);
-            cv::Scalar color2(255, 115, 55);
-            cv::Scalar color3(5, 255, 55);
-            cv::Scalar color4(25, 15, 255);
-            cv::Scalar color5(225, 15, 55);
-            for(size_t j = 0; j < 21; j++)
-            {
-                cv::circle(rgb, objects[i].skeleton[j],4,cv::Scalar(255,0,0),-1);
-                if (j < 4)
-                {
-                    cv::line(rgb, objects[i].skeleton[j], objects[i].skeleton[j+1], color1, 2, 8);
-                }
-                if (j < 8 && j > 4)
-                {
-                    cv::line(rgb, objects[i].skeleton[j], objects[i].skeleton[j+1], color2, 2, 8);
-                }
-                if (j < 12 && j > 8)
-                {
-                    cv::line(rgb, objects[i].skeleton[j], objects[i].skeleton[j+1], color3, 2, 8);
-                }
-                if (j < 16 && j > 12)
-                {
-                    cv::line(rgb, objects[i].skeleton[j], objects[i].skeleton[j+1], color4, 2, 8);
-                }
-                if (j < 20 && j > 16)
-                {
-                    cv::line(rgb, objects[i].skeleton[j], objects[i].skeleton[j+1], color5, 2, 8);
-                }
-            }
-            cv::line(rgb, objects[i].skeleton[0], objects[i].skeleton[5], color2, 2, 8);
-            cv::line(rgb, objects[i].skeleton[0], objects[i].skeleton[9], color3, 2, 8);
-            cv::line(rgb, objects[i].skeleton[0], objects[i].skeleton[13], color4, 2, 8);
-            cv::line(rgb, objects[i].skeleton[0], objects[i].skeleton[17], color5, 2, 8);
+//            cv::Scalar color1(10, 215, 255);
+//            cv::Scalar color2(255, 115, 55);
+//            cv::Scalar color3(5, 255, 55);
+//            cv::Scalar color4(25, 15, 255);
+//            cv::Scalar color5(225, 15, 55);
+          cv::circle(rgb, objects[i].skeleton[8],4,cv::Scalar(255,0,0),-1);
+          cv::circle(rgb, objects[i].skeleton[10],4,cv::Scalar(255,0,0),-1);
+          cv::circle(rgb, objects[i].skeleton[6],4,cv::Scalar(255,0,0),-1);
+          cv::circle(rgb, objects[i].skeleton[12],4,cv::Scalar(255,0,0),-1);
+
+//            for(size_t j = 0; j < 21; j++)
+//            {
+
+
+
+//                if (j < 4)
+//                {
+//                  cv::line(rgb, objects[i].skeleton[j], objects[i].skeleton[j+1], color1, 2, 8);
+//                }
+//                if (j < 8 && j > 4)
+//                {
+//                    cv::line(rgb, objects[i].skeleton[j], objects[i].skeleton[j+1], color2, 2, 8);
+//                }
+//                if (j < 12 && j > 8)
+//                {
+//                    cv::line(rgb, objects[i].skeleton[j], objects[i].skeleton[j+1], color3, 2, 8);
+//                }
+//                if (j < 16 && j > 12)
+//                {
+//                    cv::line(rgb, objects[i].skeleton[j], objects[i].skeleton[j+1], color4, 2, 8);
+//                }
+//                if (j < 20 && j > 16)
+//                {
+//                    cv::line(rgb, objects[i].skeleton[j], objects[i].skeleton[j+1], color5, 2, 8);
+//                }
+          //  }
+//            cv::line(rgb, objects[i].skeleton[0], objects[i].skeleton[5], color2, 2, 8);
+//            cv::line(rgb, objects[i].skeleton[0], objects[i].skeleton[9], color3, 2, 8);
+//            cv::line(rgb, objects[i].skeleton[0], objects[i].skeleton[13], color4, 2, 8);
+//            cv::line(rgb, objects[i].skeleton[0], objects[i].skeleton[17], color5, 2, 8);
         }
 
-        cv::line(rgb, objects[i].hand_pos[0], objects[i].hand_pos[1], cv::Scalar(0, 0, 255), 2, 8, 0);
-        cv::line(rgb, objects[i].hand_pos[1], objects[i].hand_pos[2], cv::Scalar(0, 0, 255), 2, 8, 0);
-        cv::line(rgb, objects[i].hand_pos[2], objects[i].hand_pos[3], cv::Scalar(0, 0, 255), 2, 8, 0);
-        cv::line(rgb, objects[i].hand_pos[3], objects[i].hand_pos[0], cv::Scalar(0, 0, 255), 2, 8, 0);
+//        cv::line(rgb, objects[i].hand_pos[0], objects[i].hand_pos[1], cv::Scalar(0, 0, 255), 2, 8, 0);
+//        cv::line(rgb, objects[i].hand_pos[1], objects[i].hand_pos[2], cv::Scalar(0, 0, 255), 2, 8, 0);
+//        cv::line(rgb, objects[i].hand_pos[2], objects[i].hand_pos[3], cv::Scalar(0, 0, 255), 2, 8, 0);
+//        cv::line(rgb, objects[i].hand_pos[3], objects[i].hand_pos[0], cv::Scalar(0, 0, 255), 2, 8, 0);
 
     }
 

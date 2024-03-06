@@ -230,9 +230,9 @@ int Yolo::load(AAssetManager* mgr, const char* modeltype, int _target_size, cons
     blob_pool_allocator.clear();
     workspace_pool_allocator.clear();
 
-    ncnn::set_cpu_powersave(2);
-    ncnn::set_omp_num_threads(ncnn::get_big_cpu_count());
-
+    ncnn::set_cpu_powersave(1);
+    ncnn::set_omp_num_threads(ncnn::get_big_cpu_count()/2);
+//ncnn::get_big_cpu_count()
     yolo.opt = ncnn::Option();
 
 #if NCNN_VULKAN

@@ -313,7 +313,7 @@ JNIEXPORT jboolean JNICALL Java_com_tencent_yolov8ncnn_Yolov8Ncnn_loadModel2(JNI
 
     // reload
     {
-        ncnn::MutexLockGuard g(lock);
+        ncnn::MutexLockGuard g(lock2);
 
         if (use_gpu && ncnn::get_gpu_count() == 0)
         {
