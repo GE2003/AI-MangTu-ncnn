@@ -117,7 +117,6 @@ static int draw_fps(cv::Mat& rgb)
 }
 
 //创建2个对象
-
 static Yolo* g_yolo = 0;
 static ncnn::Mutex lock;
 
@@ -157,7 +156,6 @@ void MyNdkCamera::on_image_render(cv::Mat& rgb) const
                 {
                     std::vector<PalmObject> objects;
                     g_hand->detect(rgb, objects);
-
                     g_hand->draw(rgb, objects);
                 }
                 else

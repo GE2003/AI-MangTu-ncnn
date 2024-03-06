@@ -1,30 +1,34 @@
 [
     {
-        "merged": "com.tencent.yolov8ncnn.app-merged_res-31:/layout_activity_python.xml.flat",
-        "source": "com.tencent.yolov8ncnn.app-main-33:/layout/activity_python.xml"
+        "merged": "C:\\Users\\GE gie gie\\.gradle\\daemon\\7.3.3\\com.tencent.yolov8ncnn.app-merged_res-31:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\GE gie gie\\.gradle\\daemon\\7.3.3\\com.tencent.yolov8ncnn.app-main-33:\\mipmap-xxxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.tencent.yolov8ncnn.app-merged_res-31:/mipmap-xxxhdpi_app.jpg.flat",
-        "source": "com.tencent.yolov8ncnn.app-main-33:/mipmap-xxxhdpi/app.jpg"
+        "merged": "C:\\Users\\GE gie gie\\.gradle\\daemon\\7.3.3\\com.tencent.yolov8ncnn.app-merged_res-31:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\GE gie gie\\.gradle\\daemon\\7.3.3\\com.tencent.yolov8ncnn.app-main-33:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\GE gie gie\\.gradle\\daemon\\7.3.3\\com.tencent.yolov8ncnn.app-merged_res-31:\\mipmap-xxxhdpi_app.jpg.flat",
+        "source": "C:\\Users\\GE gie gie\\.gradle\\daemon\\7.3.3\\com.tencent.yolov8ncnn.app-main-33:\\mipmap-xxxhdpi\\app.jpg"
     },
     {
         "merged": "com.tencent.yolov8ncnn.app-merged_res-31:/layout_main.xml.flat",
         "source": "com.tencent.yolov8ncnn.app-main-33:/layout/main.xml"
     },
     {
-        "merged": "com.tencent.yolov8ncnn.app-merged_res-31:/layout_activity_test.xml.flat",
-        "source": "com.tencent.yolov8ncnn.app-main-33:/layout/activity_test.xml"
+        "merged": "C:\\Users\\GE gie gie\\.gradle\\daemon\\7.3.3\\com.tencent.yolov8ncnn.app-merged_res-31:\\layout_activity_python.xml.flat",
+        "source": "C:\\Users\\GE gie gie\\.gradle\\daemon\\7.3.3\\com.tencent.yolov8ncnn.app-main-33:\\layout\\activity_python.xml"
     },
     {
-        "merged": "com.tencent.yolov8ncnn.app-merged_res-31:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "com.tencent.yolov8ncnn.app-main-33:/mipmap-xxxhdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\GE gie gie\\.gradle\\daemon\\7.3.3\\com.tencent.yolov8ncnn.app-merged_res-31:\\layout_activity_test.xml.flat",
+        "source": "C:\\Users\\GE gie gie\\.gradle\\daemon\\7.3.3\\com.tencent.yolov8ncnn.app-main-33:\\layout\\activity_test.xml"
     },
     {
-        "merged": "com.tencent.yolov8ncnn.app-merged_res-31:/mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "com.tencent.yolov8ncnn.app-main-33:/mipmap-xxxhdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\GE gie gie\\.gradle\\daemon\\7.3.3\\com.tencent.yolov8ncnn.app-merged_res-31:\\layout_main.xml.flat",
+        "source": "C:\\Users\\GE gie gie\\.gradle\\daemon\\7.3.3\\com.tencent.yolov8ncnn.app-main-33:\\layout\\main.xml"
     },
     {
-        "merged": "com.tencent.yolov8ncnn.app-merged_res-31:/layout_activity_hand.xml.flat",
-        "source": "com.tencent.yolov8ncnn.app-main-33:/layout/activity_hand.xml"
+        "merged": "C:\\Users\\GE gie gie\\.gradle\\daemon\\7.3.3\\com.tencent.yolov8ncnn.app-merged_res-31:\\layout_activity_hand.xml.flat",
+        "source": "C:\\Users\\GE gie gie\\.gradle\\daemon\\7.3.3\\com.tencent.yolov8ncnn.app-main-33:\\layout\\activity_hand.xml"
     }
 ]
