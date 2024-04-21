@@ -1,17 +1,1 @@
 ninja: Entering directory `V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\.cxx\Debug\e701q4y1\x86_64'
-[1/9] Building CXX object CMakeFiles/mediapipehand.dir/ndkcamera.cpp.o
-[2/9] Building CXX object CMakeFiles/yolov8ncnn.dir/ndkcamera.cpp.o
-[3/9] Building CXX object CMakeFiles/yolov8ncnn.dir/yolov8ncnn.cpp.o
-[4/9] Building CXX object CMakeFiles/mediapipehand.dir/landmark.cpp.o
-[5/9] Building CXX object CMakeFiles/mediapipehand.dir/mediapipehand.cpp.o
-[6/9] Building CXX object CMakeFiles/yolov8ncnn.dir/yolo.cpp.o
-V:/Desktop/Android/ncnn-android-yolov8-main/ncnn-android-yolov8/app/src/main/jni/yolo.cpp:249:51: warning: data argument not used by format string [-Wformat-extra-args]
-    sprintf(parampath, "best-sim-opt-fp16.param", modeltype);
-                       ~~~~~~~~~~~~~~~~~~~~~~~~~  ^
-V:/Desktop/Android/ncnn-android-yolov8-main/ncnn-android-yolov8/app/src/main/jni/yolo.cpp:250:49: warning: data argument not used by format string [-Wformat-extra-args]
-    sprintf(modelpath, "best-sim-opt-fp16.bin", modeltype);
-                       ~~~~~~~~~~~~~~~~~~~~~~~  ^
-2 warnings generated.
-[7/9] Building CXX object CMakeFiles/mediapipehand.dir/hand.cpp.o
-[8/9] Linking CXX shared library V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\build\intermediates\cxx\Debug\e701q4y1\obj\x86_64\libyolov8ncnn.so
-[9/9] Linking CXX shared library V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\build\intermediates\cxx\Debug\e701q4y1\obj\x86_64\libmediapipehand.so

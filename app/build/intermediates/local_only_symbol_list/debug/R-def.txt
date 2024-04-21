@@ -11,6 +11,7 @@ id spinnerModel
 id start_camera
 id surfaceView
 layout activity_hand
+layout activity_lesson
 layout activity_python
 layout activity_test
 layout main
@@ -18,3 +19,5 @@ mipmap app
 mipmap ic_launcher
 mipmap ic_launcher_round
 string app_name
+string button_tx
+string xiaoxun

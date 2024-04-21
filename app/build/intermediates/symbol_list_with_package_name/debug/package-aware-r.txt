@@ -3239,6 +3239,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_hand
+layout activity_lesson
 layout activity_python
 layout activity_test
 layout custom_dialog
@@ -3357,6 +3358,7 @@ string bottomsheet_action_expand
 string bottomsheet_action_expand_halfway
 string bottomsheet_drag_handle_clicked
 string bottomsheet_drag_handle_content_description
+string button_tx
 string character_counter_content_description
 string character_counter_overflowed_content_description
 string character_counter_pattern
@@ -3463,6 +3465,7 @@ string path_password_eye_mask_visible
 string path_password_strike_through
 string search_menu_title
 string status_bar_notification_info_overflow
+string xiaoxun
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog

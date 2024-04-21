@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:2:1-35:12
-INJECTED from V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:2:1-35:12
-INJECTED from V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:2:1-35:12
-INJECTED from V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:2:1-35:12
+ADDED from V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:2:1-40:12
 MERGED from [com.google.android.material:material:1.7.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\cd2406403c3995320f0186a0b57789ff\transformed\material-1.7.0\AndroidManifest.xml:17:1-26:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\GE gie gie\.gradle\caches\transforms-3\108954814b30f76ccc1f0a284971c78c\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat-resources:1.5.1] C:\Users\GE gie gie\.gradle\caches\transforms-3\8945b434633384c15ee9bcea39879cd4\transformed\jetified-appcompat-resources-1.5.1\AndroidManifest.xml:17:1-22:12
@@ -54,9 +54,9 @@ MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\GE gie gie\.grad
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\5b9880ef913bfdecbd81b064da373d95\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\3a17d6746f119df8b466d5889aa13b6c\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\a434542a3e71c826b3bc7edea1b80b63\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
-INJECTED from V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:2:1-35:12
-INJECTED from V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:2:1-35:12
-INJECTED from V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:2:1-35:12
+INJECTED from V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:2:1-40:12
 	package
 		ADDED from V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:3:7-39
 		INJECTED from V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml
@@ -80,7 +80,7 @@ ADDED from V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\s
 	android:name
 		ADDED from V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:7:19-63
 application
-ADDED from V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:9:5-34:19
+ADDED from V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:9:5-39:19
 MERGED from [com.google.android.material:material:1.7.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\cd2406403c3995320f0186a0b57789ff\transformed\material-1.7.0\AndroidManifest.xml:24:5-20
 MERGED from [com.google.android.material:material:1.7.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\cd2406403c3995320f0186a0b57789ff\transformed\material-1.7.0\AndroidManifest.xml:24:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\GE gie gie\.gradle\caches\transforms-3\108954814b30f76ccc1f0a284971c78c\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
@@ -133,20 +133,28 @@ ADDED from V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\s
 		ADDED from V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:24:19-42
 	android:name
 		ADDED from V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:23:19-49
-activity#com.tencent.yolov8ncnn.handActivity
-ADDED from V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:26:9-28:20
+activity#com.tencent.yolov8ncnn.LessonActivity
+ADDED from V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:26:9-30:20
 	android:exported
-		ADDED from V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:27:9-32
-	android:name
-		ADDED from V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:26:19-46
-activity#com.tencent.yolov8ncnn.Test.TestActivity
-ADDED from V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:29:9-32:20
-	android:exported
-		ADDED from V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:31:19-42
+		ADDED from V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:29:19-42
 	android:theme
-		ADDED from V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:30:19-75
+		ADDED from V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:27:19-75
 	android:name
-		ADDED from V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:29:19-52
+		ADDED from V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:26:19-49
+activity#com.tencent.yolov8ncnn.handActivity
+ADDED from V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:31:9-33:20
+	android:exported
+		ADDED from V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:32:9-32
+	android:name
+		ADDED from V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:31:19-46
+activity#com.tencent.yolov8ncnn.Test.TestActivity
+ADDED from V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:34:9-37:20
+	android:exported
+		ADDED from V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:36:19-42
+	android:theme
+		ADDED from V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:35:19-75
+	android:name
+		ADDED from V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:34:19-52
 uses-sdk
 INJECTED from V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml

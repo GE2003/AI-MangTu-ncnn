@@ -8,4 +8,6 @@
         <item>best-sim-opt-fp16</item>
     </string-array>
     <string name="app_name">盲图AI</string>
+    <string name="button_tx">按钮</string>
+    <string name="xiaoxun">广学明德,海纳厚为</string>
 </resources>

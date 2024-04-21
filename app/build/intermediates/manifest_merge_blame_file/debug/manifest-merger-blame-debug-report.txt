@@ -27,7 +27,7 @@
 17-->[com.google.android.datatransport:transport-backend-cct:3.1.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\52319493c48ba4f81b961ac79af578a6\transformed\jetified-transport-backend-cct-3.1.0\AndroidManifest.xml:26:22-64
 18
 19    <application
-19-->V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:9:5-34:19
+19-->V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:9:5-39:19
 20        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 20-->[androidx.core:core:1.8.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\a79ccc97c817d86347cfa8cc84a595b1\transformed\core-1.8.0\AndroidManifest.xml:24:18-86
 21        android:debuggable="true"
@@ -68,73 +68,82 @@
 40-->V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:24:19-42
 41        </activity>
 42        <activity
-42-->V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:26:9-28:20
-43            android:name="com.tencent.yolov8ncnn.handActivity"
-43-->V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:26:19-46
-44            android:exported="true" >
-44-->V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:27:9-32
-45        </activity>
-46        <activity
-46-->V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:29:9-32:20
-47            android:name="com.tencent.yolov8ncnn.Test.TestActivity"
-47-->V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:29:19-52
-48            android:exported="true"
-48-->V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:31:19-42
-49            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
-49-->V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:30:19-75
+42-->V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:26:9-30:20
+43            android:name="com.tencent.yolov8ncnn.LessonActivity"
+43-->V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:26:19-49
+44            android:exported="true"
+44-->V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:29:19-42
+45            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+45-->V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:27:19-75
+46        </activity>
+47        <activity
+47-->V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:31:9-33:20
+48            android:name="com.tencent.yolov8ncnn.handActivity"
+48-->V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:31:19-46
+49            android:exported="true" >
+49-->V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:32:9-32
 50        </activity>
-51
-52        <provider
-52-->[androidx.emoji2:emoji2:1.2.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\a1b06344d947e46dbaab22638522d700\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
-53            android:name="androidx.startup.InitializationProvider"
-53-->[androidx.emoji2:emoji2:1.2.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\a1b06344d947e46dbaab22638522d700\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
-54            android:authorities="com.tencent.yolov8ncnn.androidx-startup"
-54-->[androidx.emoji2:emoji2:1.2.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\a1b06344d947e46dbaab22638522d700\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
-55            android:exported="false" >
-55-->[androidx.emoji2:emoji2:1.2.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\a1b06344d947e46dbaab22638522d700\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
-56            <meta-data
-56-->[androidx.emoji2:emoji2:1.2.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\a1b06344d947e46dbaab22638522d700\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
-57                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-57-->[androidx.emoji2:emoji2:1.2.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\a1b06344d947e46dbaab22638522d700\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
-58                android:value="androidx.startup" />
-58-->[androidx.emoji2:emoji2:1.2.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\a1b06344d947e46dbaab22638522d700\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
-59            <meta-data
-59-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\GE gie gie\.gradle\caches\transforms-3\3cd99bad5397ecb1119a30ae501244c2\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
-60                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-60-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\GE gie gie\.gradle\caches\transforms-3\3cd99bad5397ecb1119a30ae501244c2\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
-61                android:value="androidx.startup" />
-61-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\GE gie gie\.gradle\caches\transforms-3\3cd99bad5397ecb1119a30ae501244c2\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
-62        </provider>
-63
-64        <service
-64-->[com.google.android.datatransport:transport-backend-cct:3.1.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\52319493c48ba4f81b961ac79af578a6\transformed\jetified-transport-backend-cct-3.1.0\AndroidManifest.xml:29:9-35:19
-65            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
-65-->[com.google.android.datatransport:transport-backend-cct:3.1.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\52319493c48ba4f81b961ac79af578a6\transformed\jetified-transport-backend-cct-3.1.0\AndroidManifest.xml:30:13-103
-66            android:exported="false" >
-66-->[com.google.android.datatransport:transport-backend-cct:3.1.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\52319493c48ba4f81b961ac79af578a6\transformed\jetified-transport-backend-cct-3.1.0\AndroidManifest.xml:31:13-37
-67            <meta-data
-67-->[com.google.android.datatransport:transport-backend-cct:3.1.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\52319493c48ba4f81b961ac79af578a6\transformed\jetified-transport-backend-cct-3.1.0\AndroidManifest.xml:32:13-34:39
-68                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
-68-->[com.google.android.datatransport:transport-backend-cct:3.1.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\52319493c48ba4f81b961ac79af578a6\transformed\jetified-transport-backend-cct-3.1.0\AndroidManifest.xml:33:17-94
-69                android:value="cct" />
-69-->[com.google.android.datatransport:transport-backend-cct:3.1.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\52319493c48ba4f81b961ac79af578a6\transformed\jetified-transport-backend-cct-3.1.0\AndroidManifest.xml:34:17-36
-70        </service>
-71        <service
-71-->[com.google.android.datatransport:transport-runtime:3.1.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\db667e770f152f02fe0eec56b3657a82\transformed\jetified-transport-runtime-3.1.0\AndroidManifest.xml:26:9-30:19
-72            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
-72-->[com.google.android.datatransport:transport-runtime:3.1.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\db667e770f152f02fe0eec56b3657a82\transformed\jetified-transport-runtime-3.1.0\AndroidManifest.xml:27:13-117
-73            android:exported="false"
-73-->[com.google.android.datatransport:transport-runtime:3.1.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\db667e770f152f02fe0eec56b3657a82\transformed\jetified-transport-runtime-3.1.0\AndroidManifest.xml:28:13-37
-74            android:permission="android.permission.BIND_JOB_SERVICE" >
-74-->[com.google.android.datatransport:transport-runtime:3.1.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\db667e770f152f02fe0eec56b3657a82\transformed\jetified-transport-runtime-3.1.0\AndroidManifest.xml:29:13-69
+51        <activity
+51-->V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:34:9-37:20
+52            android:name="com.tencent.yolov8ncnn.Test.TestActivity"
+52-->V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:34:19-52
+53            android:exported="true"
+53-->V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:36:19-42
+54            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+54-->V:\Desktop\Android\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:35:19-75
+55        </activity>
+56
+57        <provider
+57-->[androidx.emoji2:emoji2:1.2.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\a1b06344d947e46dbaab22638522d700\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+58            android:name="androidx.startup.InitializationProvider"
+58-->[androidx.emoji2:emoji2:1.2.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\a1b06344d947e46dbaab22638522d700\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
+59            android:authorities="com.tencent.yolov8ncnn.androidx-startup"
+59-->[androidx.emoji2:emoji2:1.2.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\a1b06344d947e46dbaab22638522d700\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
+60            android:exported="false" >
+60-->[androidx.emoji2:emoji2:1.2.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\a1b06344d947e46dbaab22638522d700\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
+61            <meta-data
+61-->[androidx.emoji2:emoji2:1.2.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\a1b06344d947e46dbaab22638522d700\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+62                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+62-->[androidx.emoji2:emoji2:1.2.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\a1b06344d947e46dbaab22638522d700\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+63                android:value="androidx.startup" />
+63-->[androidx.emoji2:emoji2:1.2.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\a1b06344d947e46dbaab22638522d700\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+64            <meta-data
+64-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\GE gie gie\.gradle\caches\transforms-3\3cd99bad5397ecb1119a30ae501244c2\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+65                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+65-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\GE gie gie\.gradle\caches\transforms-3\3cd99bad5397ecb1119a30ae501244c2\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+66                android:value="androidx.startup" />
+66-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\GE gie gie\.gradle\caches\transforms-3\3cd99bad5397ecb1119a30ae501244c2\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+67        </provider>
+68
+69        <service
+69-->[com.google.android.datatransport:transport-backend-cct:3.1.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\52319493c48ba4f81b961ac79af578a6\transformed\jetified-transport-backend-cct-3.1.0\AndroidManifest.xml:29:9-35:19
+70            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+70-->[com.google.android.datatransport:transport-backend-cct:3.1.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\52319493c48ba4f81b961ac79af578a6\transformed\jetified-transport-backend-cct-3.1.0\AndroidManifest.xml:30:13-103
+71            android:exported="false" >
+71-->[com.google.android.datatransport:transport-backend-cct:3.1.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\52319493c48ba4f81b961ac79af578a6\transformed\jetified-transport-backend-cct-3.1.0\AndroidManifest.xml:31:13-37
+72            <meta-data
+72-->[com.google.android.datatransport:transport-backend-cct:3.1.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\52319493c48ba4f81b961ac79af578a6\transformed\jetified-transport-backend-cct-3.1.0\AndroidManifest.xml:32:13-34:39
+73                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+73-->[com.google.android.datatransport:transport-backend-cct:3.1.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\52319493c48ba4f81b961ac79af578a6\transformed\jetified-transport-backend-cct-3.1.0\AndroidManifest.xml:33:17-94
+74                android:value="cct" />
+74-->[com.google.android.datatransport:transport-backend-cct:3.1.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\52319493c48ba4f81b961ac79af578a6\transformed\jetified-transport-backend-cct-3.1.0\AndroidManifest.xml:34:17-36
 75        </service>
-76
-77        <receiver
-77-->[com.google.android.datatransport:transport-runtime:3.1.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\db667e770f152f02fe0eec56b3657a82\transformed\jetified-transport-runtime-3.1.0\AndroidManifest.xml:32:9-34:40
-78            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
-78-->[com.google.android.datatransport:transport-runtime:3.1.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\db667e770f152f02fe0eec56b3657a82\transformed\jetified-transport-runtime-3.1.0\AndroidManifest.xml:33:13-132
-79            android:exported="false" />
-79-->[com.google.android.datatransport:transport-runtime:3.1.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\db667e770f152f02fe0eec56b3657a82\transformed\jetified-transport-runtime-3.1.0\AndroidManifest.xml:34:13-37
-80    </application>
+76        <service
+76-->[com.google.android.datatransport:transport-runtime:3.1.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\db667e770f152f02fe0eec56b3657a82\transformed\jetified-transport-runtime-3.1.0\AndroidManifest.xml:26:9-30:19
+77            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+77-->[com.google.android.datatransport:transport-runtime:3.1.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\db667e770f152f02fe0eec56b3657a82\transformed\jetified-transport-runtime-3.1.0\AndroidManifest.xml:27:13-117
+78            android:exported="false"
+78-->[com.google.android.datatransport:transport-runtime:3.1.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\db667e770f152f02fe0eec56b3657a82\transformed\jetified-transport-runtime-3.1.0\AndroidManifest.xml:28:13-37
+79            android:permission="android.permission.BIND_JOB_SERVICE" >
+79-->[com.google.android.datatransport:transport-runtime:3.1.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\db667e770f152f02fe0eec56b3657a82\transformed\jetified-transport-runtime-3.1.0\AndroidManifest.xml:29:13-69
+80        </service>
 81
-82</manifest>
+82        <receiver
+82-->[com.google.android.datatransport:transport-runtime:3.1.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\db667e770f152f02fe0eec56b3657a82\transformed\jetified-transport-runtime-3.1.0\AndroidManifest.xml:32:9-34:40
+83            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+83-->[com.google.android.datatransport:transport-runtime:3.1.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\db667e770f152f02fe0eec56b3657a82\transformed\jetified-transport-runtime-3.1.0\AndroidManifest.xml:33:13-132
+84            android:exported="false" />
+84-->[com.google.android.datatransport:transport-runtime:3.1.0] C:\Users\GE gie gie\.gradle\caches\transforms-3\db667e770f152f02fe0eec56b3657a82\transformed\jetified-transport-runtime-3.1.0\AndroidManifest.xml:34:13-37
+85    </application>
+86
+87</manifest>

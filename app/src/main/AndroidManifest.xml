@@ -23,6 +23,11 @@
         <activity android:name=".PythonActivity"
                   android:exported="true">
         </activity>
+        <activity android:name=".LessonActivity"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+
+                  android:exported="true">
+        </activity>
         <activity android:name="handActivity"
         android:exported="true">
         </activity>

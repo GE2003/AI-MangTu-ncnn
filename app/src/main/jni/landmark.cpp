@@ -80,4 +80,3 @@ float LandmarkDetect::detect(const cv::Mat& rgb,const cv::Mat& trans_mat, std::v
     }
     return score_data[0];
 }
-

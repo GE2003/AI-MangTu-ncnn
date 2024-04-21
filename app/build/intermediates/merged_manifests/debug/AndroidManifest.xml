@@ -40,6 +40,11 @@
             android:exported="true" >
         </activity>
         <activity
+            android:name="com.tencent.yolov8ncnn.LessonActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <activity
             android:name="com.tencent.yolov8ncnn.handActivity"
             android:exported="true" >
         </activity>

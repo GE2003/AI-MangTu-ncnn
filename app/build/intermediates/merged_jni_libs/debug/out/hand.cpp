@@ -380,7 +380,7 @@ int Hand::load(AAssetManager* mgr, const char* modeltype, int _target_size, cons
     return 0;
 }
 
-
+//给手指跟踪的集合赋值函数——palmobject
 int Hand::detect(const cv::Mat& rgb, std::vector<PalmObject>& objects, float prob_threshold, float nms_threshold)
 {
     int width = rgb.cols;
@@ -478,21 +478,20 @@ int Hand::draw(cv::Mat& rgb, const std::vector<PalmObject>& objects)
         //objects[i].trans_image.copyTo(rgb(cv::Rect(0,0,224,224)));
         for(int j = 0; j < objects[i].skeleton.size(); j++)
         {
-//            cv::Scalar color1(10, 215, 255);
-//            cv::Scalar color2(255, 115, 55);
-//            cv::Scalar color3(5, 255, 55);
-//            cv::Scalar color4(25, 15, 255);
-//            cv::Scalar color5(225, 15, 55);
+           cv::Scalar color1(10, 215, 255);
+           cv::Scalar color2(255, 115, 55);
+           cv::Scalar color3(5, 255, 55);
+           cv::Scalar color4(25, 15, 255);
+           cv::Scalar color5(225, 15, 55);
           cv::circle(rgb, objects[i].skeleton[8],4,cv::Scalar(255,0,0),-1);
-          cv::circle(rgb, objects[i].skeleton[10],4,cv::Scalar(255,0,0),-1);
+         cv::circle(rgb, objects[i].skeleton[10],4,cv::Scalar(255,0,0),-1);
           cv::circle(rgb, objects[i].skeleton[6],4,cv::Scalar(255,0,0),-1);
-          cv::circle(rgb, objects[i].skeleton[12],4,cv::Scalar(255,0,0),-1);
-
+         cv::circle(rgb, objects[i].skeleton[12],4,cv::Scalar(255,0,0),-1);
 //            for(size_t j = 0; j < 21; j++)
 //            {
-
-
-
+//      // cv::circle(rgb, objects[i].skeleton[j],4,cv::Scalar(255,0,0),-1);
+//
+//
 //                if (j < 4)
 //                {
 //                  cv::line(rgb, objects[i].skeleton[j], objects[i].skeleton[j+1], color1, 2, 8);
@@ -513,13 +512,13 @@ int Hand::draw(cv::Mat& rgb, const std::vector<PalmObject>& objects)
 //                {
 //                    cv::line(rgb, objects[i].skeleton[j], objects[i].skeleton[j+1], color5, 2, 8);
 //                }
-          //  }
+//            }
 //            cv::line(rgb, objects[i].skeleton[0], objects[i].skeleton[5], color2, 2, 8);
 //            cv::line(rgb, objects[i].skeleton[0], objects[i].skeleton[9], color3, 2, 8);
 //            cv::line(rgb, objects[i].skeleton[0], objects[i].skeleton[13], color4, 2, 8);
 //            cv::line(rgb, objects[i].skeleton[0], objects[i].skeleton[17], color5, 2, 8);
         }
-
+ //手指识别旋转框
 //        cv::line(rgb, objects[i].hand_pos[0], objects[i].hand_pos[1], cv::Scalar(0, 0, 255), 2, 8, 0);
 //        cv::line(rgb, objects[i].hand_pos[1], objects[i].hand_pos[2], cv::Scalar(0, 0, 255), 2, 8, 0);
 //        cv::line(rgb, objects[i].hand_pos[2], objects[i].hand_pos[3], cv::Scalar(0, 0, 255), 2, 8, 0);

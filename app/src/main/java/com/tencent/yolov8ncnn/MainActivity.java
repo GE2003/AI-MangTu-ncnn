@@ -22,10 +22,12 @@ import android.graphics.Bitmap;
 import android.graphics.Matrix;
 import android.graphics.PixelFormat;
 import android.graphics.SurfaceTexture;
+import android.icu.text.UFormat;
 import android.opengl.GLSurfaceView;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Message;
 import android.provider.MediaStore;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -50,8 +52,7 @@ import com.tencent.yolov8ncnn.Test.HandsResultImageView;
 import com.tencent.yolov8ncnn.Test.TestActivity;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 
 public class MainActivity extends AppCompatActivity implements SurfaceHolder.Callback
@@ -65,6 +66,7 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
     // Run the pipeline and the model inference on GPU or CPU.
     private static final boolean RUN_ON_GPU = true;
     private ImageView bmshow;
+    private TTSUtils tts;
 
     private enum InputSource {
         UNKNOWN,
@@ -107,9 +109,10 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
     private Spinner spinnerCPUGPU;
     private int current_model = 0;
     private int current_cpugpu = 0;
+    List<String> list = new ArrayList<>();
   private Bitmap bmp = null;
     private SurfaceView cameraView;
-
+  private Timer mTimer;
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState)
@@ -125,7 +128,10 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
        cameraView.getHolder().addCallback(this);
        cameraView.setDrawingCacheEnabled(true);
        cameraView.buildDrawingCache(true);
-
+        mTimer = new Timer();
+        //5s响一次
+        mTimer.schedule(timerTask, 0, 1000);
+     //  yolov8ncnn.speakText("盲图AI测试");
 
 //        Button buttonSwitchCamera = (Button) findViewById(R.id.buttonSwitchCamera);
 //        buttonSwitchCamera.setOnClickListener(new View.OnClickListener() {
@@ -183,20 +189,64 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
       //  setupStaticImageDemoUiComponents();
 
     }
+    TimerTask timerTask = new TimerTask() {
+
+        @Override
+        public void run() {
+            Message msg = new Message();
+            msg.what = 1;
+            handler.sendMessage(msg);
+        }
+    };
+
+    Handler handler = new Handler(){
+        public void handleMessage(Message msg) {
+            switch (msg.what) {
+                case 1:
+                    //需要循环执行的代码
+                    setTextSpeak();
+                    break;
+                default:
+                    break;
+            }
+        };
+    };
+
+    private void setTextSpeak() {
+        String label = yolov8ncnn.checkPointIfInDetectBox();
+        tts = TTSUtils.getInstance(this);
+        System.out.println(label);
+
+            if (label.equals("WNke")){
+
+            tts.playText("蜗牛的壳");
+                list.clear();
+
+            }else if (label.equals("WNtoubu")){
+
+        tts.playText("蜗牛的头部");
+                list.clear();
+            }else if (label.equals("WNshenti")){
+        tts.playText("蜗牛的身体");
+                list.clear();
+            }else {
+                list.add(label);
+                if (list.size()==7){
+
+        tts.playText(label);
+        list.clear();
+                }
+            }
 
 
 
-
-
-
-
-
+    }
 
 
     private void reload()
     {
         boolean ret_init = yolov8ncnn.loadModel(getAssets(), current_model, current_cpugpu);
-        boolean ret_init2 = yolov8ncnn.loadModel2(getAssets(), current_model, current_cpugpu);
+        boolean ret_init2 = yolov8ncnn.loadModel2(getAssets(), current_model, 0);
 
 
         if (!ret_init)
@@ -235,14 +285,14 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
             ActivityCompat.requestPermissions(this, new String[] {Manifest.permission.CAMERA}, REQUEST_CAMERA);
         }
         yolov8ncnn.openCamera(facing);
-
+        setTextSpeak();
     }
 
     @Override
     public void onPause()
     {
         super.onPause();
-
+        tts.stopSpeak();
         yolov8ncnn.closeCamera();
     }
 }

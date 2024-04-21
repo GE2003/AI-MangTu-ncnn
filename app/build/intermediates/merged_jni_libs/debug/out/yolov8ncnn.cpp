@@ -33,6 +33,7 @@
 
 #include "hand.h"
 
+#include "speak_lib.h"
 
 #include "ndkcamera.h"
 
@@ -117,14 +118,13 @@ static int draw_fps(cv::Mat& rgb)
 }
 
 //创建2个对象
-
 static Yolo* g_yolo = 0;
 static ncnn::Mutex lock;
 
 static Hand* g_hand = 0;
 static ncnn::Mutex lock2;
-
-
+static std::vector<Object> objectsA;
+static std::vector<PalmObject> objectsB;
 class MyNdkCamera : public NdkCameraWindow
 {
 public:
@@ -139,10 +139,10 @@ void MyNdkCamera::on_image_render(cv::Mat& rgb) const
   //yolo对象
         if (g_yolo)
         {
-            std::vector<Object> objects;
-            g_yolo->detect(rgb, objects);
 
-            g_yolo->draw(rgb, objects);
+            g_yolo->detect(rgb, objectsA);
+
+            g_yolo->draw(rgb, objectsA);
         }
         else
         {
@@ -155,10 +155,9 @@ void MyNdkCamera::on_image_render(cv::Mat& rgb) const
 
                 if (g_hand)
                 {
-                    std::vector<PalmObject> objects;
-                    g_hand->detect(rgb, objects);
 
-                    g_hand->draw(rgb, objects);
+                    g_hand->detect(rgb, objectsB);
+                    g_hand->draw(rgb, objectsB);
                 }
                 else
                 {
@@ -166,6 +165,9 @@ void MyNdkCamera::on_image_render(cv::Mat& rgb) const
                 }
 
         }
+        //做坐标判断
+
+
 
     }
      draw_fps(rgb);
@@ -333,7 +335,55 @@ JNIEXPORT jboolean JNICALL Java_com_tencent_yolov8ncnn_Yolov8Ncnn_loadModel2(JNI
 }
 
 
+// 判断点是否在矩形内
+bool pointInsideRect(const cv::Point2f& point, const cv::Rect_<float>& rect) {
+__android_log_print(ANDROID_LOG_DEBUG, "ncnn", "Point Coordinates: (%f, %f)", point.x, point.y);
+    return (point.x >= rect.x-50 && point.x <= rect.x + rect.width+50 &&
+            point.y >= rect.y-50 && point.y <= rect.y + rect.height+50);
+}
 
+// 获取检测框的标签值
+const char* getLabelForRect(int label) {
+    // 假设你的标签数组是这样的
+    static const char* class_names[] = {"WNtoubu",  "WNke", "WNshenti"};
+
+    if (label >= 0 && label < sizeof(class_names) / sizeof(class_names[0])) {
+        return class_names[label];
+    }
+
+    return "Unknown";  // 如果标签值无效，返回一个默认值
+}
+
+
+
+extern "C" {
+
+JNIEXPORT jstring JNICALL Java_com_tencent_yolov8ncnn_Yolov8Ncnn_checkPointIfInDetectBox(JNIEnv* env, jobject thiz)
+{
+  //  __android_log_print(ANDROID_LOG_DEBUG, "ncnn", "check_Point_if_in_detect_box");
+
+    // 在JNI函数中使用已经创建的静态集合 objectsA 和 objectsB
+    for (const auto& handObj : objectsB) {
+        for (const auto& yoloObj : objectsA) {
+            for (const auto& landmark : handObj.landmarks) {
+                if (pointInsideRect(landmark, yoloObj.rect)) {
+                    // 关键点在检测框内，获取标签值并返回到Java层
+                      __android_log_print(ANDROID_LOG_DEBUG, "ncnn", "Finger landmark coordinates: (%f, %f)",
+                                                        handObj.landmarks[1].x, handObj.landmarks[1].y);
+                    const char* label = getLabelForRect(yoloObj.label);
+                 //    __android_log_print(ANDROID_LOG_DEBUG, "ncnn", "Detected label: %s", label);
+
+                    return env->NewStringUTF(label);
+                }
+            }
+        }
+    }
+
+    // 关键点不在任何检测框内，返回一个默认值
+    return env->NewStringUTF("手指不在检测框");
+}
+
+} // extern "C"
 
 // public native boolean openCamera(int facing);
 JNIEXPORT jboolean JNICALL Java_com_tencent_yolov8ncnn_Yolov8Ncnn_openCamera(JNIEnv* env, jobject thiz, jint facing)
@@ -369,5 +419,34 @@ JNIEXPORT jboolean JNICALL Java_com_tencent_yolov8ncnn_Yolov8Ncnn_setOutputWindo
 
     return JNI_TRUE;
 }
+
+//语音测试
+//extern "C" JNIEXPORT void JNICALL
+//Java_com_tencent_yolov8ncnn_Yolov8Ncnn__speakText(JNIEnv *env, jobject instance, jstring text) {
+//    const char *nativeText = env->GetStringUTFChars(text, 0);
+//    unsigned int uniqueIdentifier;
+//    // Set up eSpeak
+//    espeak_POSITION_TYPE positionType;
+//    espeak_AUDIO_OUTPUT output;
+//    char *path = NULL;
+//    int Buflength = 500, Options = 0;
+//    void* userData = NULL;
+//
+//    // Initialize eSpeak
+//    if (espeak_Initialize(output, Buflength, path, Options) != EE_OK) {
+//        // Handle initialization error
+//        return;
+//    }
+//
+////espeak_Synth(text, 4, 0,  // position
+////               POS_CHARACTER, 0, // end position (0 means no end position)
+////              espeakCHARS_UTF8 ,
+////               &uniqueIdentifier, NULL);
+//
+//    // Release the resources
+////    espeak_Terminate();
+//  //  env->ReleaseStringUTFChars(text, nativeText);
+//}
+
 
 }
