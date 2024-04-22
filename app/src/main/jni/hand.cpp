@@ -445,16 +445,16 @@ int Hand::detect(const cv::Mat& rgb, std::vector<PalmObject>& objects, float pro
         }
 
         cv::Point2f srcPts[4];
-      srcPts[0] = objects[i].hand_pos[0];
-       srcPts[1] = objects[i].hand_pos[1];
+        srcPts[0] = objects[i].hand_pos[0];
+        srcPts[1] = objects[i].hand_pos[1];
         srcPts[2] = objects[i].hand_pos[2];
         srcPts[3] = objects[i].hand_pos[3];
 
         cv::Point2f dstPts[4];
-        dstPts[0] = cv::Point2f(0, 0);
-      dstPts[1] = cv::Point2f(224, 0);
-      dstPts[2] = cv::Point2f(224, 224);
-        dstPts[3] = cv::Point2f(0, 224);
+       dstPts[0] = cv::Point2f(0, 0);
+       dstPts[1] = cv::Point2f(224, 0);
+       dstPts[2] = cv::Point2f(224, 224);
+       dstPts[3] = cv::Point2f(0, 224);
 
         cv::Mat trans_mat = cv::getAffineTransform(srcPts, dstPts);
         cv::warpAffine(rgb, objects[i].trans_image, trans_mat, cv::Size(224, 224), 1, 0);
