@@ -19,6 +19,22 @@
 
 #include "cpu.h"
 
+ std::vector<CachedPosition>& getCachedPositions() {
+                   return cached_positions;
+         }
+
+// 修改后的 getCachedPositions 方法
+//std::vector<CachedPosition>& getCachedPositions(int label) {
+//    // 如果缓存中有该 label，返回对应的 vector
+//    if (cached_positions.find(label) != cached_positions.end()) {
+//        return cached_positions[label];
+//    } else {
+//        // 如果缓存中没有该 label，插入一个空的 vector，并返回它
+//        return cached_positions[label];  // unordered_map 的 operator[] 会自动插入新元素
+//    }
+//}
+
+
 static float fast_exp(float x)
 {
     union {
@@ -137,28 +153,32 @@ static void generate_grids_and_stride(const int target_w, const int target_h, st
         }
     }
 }
+
 static void generate_proposals(std::vector<GridAndStride> grid_strides, const ncnn::Mat& pred, float prob_threshold, std::vector<Object>& objects)
 {
     const int num_points = grid_strides.size();
-    const int num_class = 4;
+    const int num_class = 73;
     const int reg_max_1 = 16;
 
     for (int i = 0; i < num_points; i++)
     {
         const float* scores = pred.row(i) + 4 * reg_max_1;
 
-        // find label with max score
+        // find label with max score   置信度
         int label = -1;
         float score = -FLT_MAX;
         for (int k = 0; k < num_class; k++)
         {
             float confidence = scores[k];
+
             if (confidence > score)
             {
                 label = k;
                 score = confidence;
+
             }
         }
+
         float box_prob = sigmoid(score);
         if (box_prob >= prob_threshold)
         {
@@ -246,8 +266,9 @@ int Yolo::load(AAssetManager* mgr, const char* modeltype, int _target_size, cons
     char parampath[256];
     char modelpath[256];
 
-    sprintf(parampath, "best-sim-opt-fp16.param", modeltype);
-    sprintf(modelpath, "best-sim-opt-fp16.bin", modeltype);
+
+    sprintf(parampath, "best.param", modeltype);
+    sprintf(modelpath, "best.bin", modeltype);
 
 /*  sprintf(parampath, "%s.param", modeltype);
     sprintf(modelpath, "%s.bin", modeltype);*/
@@ -360,79 +381,147 @@ int Yolo::detect(const cv::Mat& rgb, std::vector<Object>& objects, float prob_th
     return 0;
 }
 
-int Yolo::draw(cv::Mat& rgb, const std::vector<Object>& objects)
-{
-/*    static const char* class_names[] = {
-        "person", "bicycle", "car", "motorcycle", "airplane", "bus", "train", "truck", "boat", "traffic light",
-        "fire hydrant", "stop sign", "parking meter", "bench", "bird", "cat", "dog", "horse", "sheep", "cow",
-        "elephant", "bear", "zebra", "giraffe", "backpack", "umbrella", "handbag", "tie", "suitcase", "frisbee",
-        "skis", "snowboard", "sports ball", "kite", "baseball bat", "baseball glove", "skateboard", "surfboard",
-        "tennis racket", "bottle", "wine glass", "cup", "fork", "knife", "spoon", "bowl", "banana", "apple",
-        "sandwich", "orange", "broccoli", "carrot", "hot dog", "pizza", "donut", "cake", "chair", "couch",
-        "potted plant", "bed", "dining table", "toilet", "tv", "laptop", "mouse", "remote", "keyboard", "cell phone",
-        "microwave", "oven", "toaster", "sink", "refrigerator", "book", "clock", "vase", "scissors", "teddy bear",
-        "hair drier", "toothbrush"
-    };*/
-        static const char* class_names[] = {
-                "Yan","Tou","Ke","ShenTi"
-       };
+int Yolo::draw(cv::Mat& rgb, const std::vector<Object>& objects) {
+    static const char* class_names[] = {
+            "QToubeibu", "QTchibang", "QTshenti", "CYfuyanzu", "CYfubu", "CYchibang",
+            "HDyanchujiao", "HDchibang", "WZkouqi", "WZfuyan", "WZzu", "WZchibang",
+            "WZshenti", "MYtoubu", "MYxiongbu", "MYfubu", "MYchujiao", "MYzu",
+            "KDtoubu", "KDweiba", "PYxian", "PXqianzi", "PXfubu", "PXfuzhi", "QWqvgan",
+            "QWqianzi", "QWhouzhi", "TLtoubu", "TLfubu", "TLqianzu", "TLzhongzu",
+            "TLhouzu", "WGtou", "WGke", "WGweiba", "WGzu", "XSqygang", "XSqianzu",
+            "XSzhongzu", "XShoizu", "XSchujiao", "XSweis", "YHCtou", "YHCshenti",
+            "YHCguang", "YHCzu", "ZZshenti", "ZZzu", "BStoubu", "BSLqygang", "BSLweibu",
+            "BHtou", "BHshenti", "BHweiba", "BHsizhi", "EYtou", "EYshenti", "EYsizi",
+            "OEhui", "OEtou", "QEshenti", "QEchi", "QEzu", "MFshenti", "SYwei","SYshenti",
+            "SYqi", "MFtou", "MFchibang", "MFxiongbu", "MFfubu", "WNtou", "WNke",
+            "WNshenti"
+    };
+
+
 
     static const unsigned char colors[19][3] = {
-        { 54,  67, 244},
-        { 99,  30, 233},
-        {176,  39, 156},
-        {183,  58, 103},
-        {181,  81,  63},
-        {243, 150,  33},
-        {244, 169,   3},
-        {212, 188,   0},
-        {136, 150,   0},
-        { 80, 175,  76},
-        { 74, 195, 139},
-        { 57, 220, 205},
-        { 59, 235, 255},
-        {  7, 193, 255},
-        {  0, 152, 255},
-        { 34,  87, 255},
-        { 72,  85, 121},
-        {158, 158, 158},
-        {139, 125,  96}
+            { 54, 67, 244}, { 99, 30, 233}, {176, 39, 156}, {183, 58, 103}, {181, 81, 63},
+            {243, 150, 33}, {244, 169, 3}, {212, 188, 0}, {136, 150, 0}, { 80, 175, 76},
+            { 74, 195, 139}, { 57, 220, 205}, { 59, 235, 255}, { 7, 193, 255}, { 0, 152, 255},
+            { 34, 87, 255}, { 72, 85, 121}, {158, 158, 158}, {139, 125, 96}
     };
 
     int color_index = 0;
-
-    for (size_t i = 0; i < objects.size(); i++)
-    {
-        const Object& obj = objects[i];
-
-//         fprintf(stderr, "%d = %.5f at %.2f %.2f %.2f x %.2f\n", obj.label, obj.prob,
-//                 obj.rect.x, obj.rect.y, obj.rect.width, obj.rect.height);
-
+    if (objects.empty()){
+       cached_positions.clear();
+    }
+    // Draw current objects
+    for (const auto& obj : objects) {
         const unsigned char* color = colors[color_index % 19];
         color_index++;
 
         cv::Scalar cc(color[0], color[1], color[2]);
-
-        cv::rectangle(rgb, obj.rect, cc, 2);
+          cv::rectangle(rgb, obj.rect, cc, 1);
 
         char text[256];
         sprintf(text, "%s %.1f%%", class_names[obj.label], obj.prob * 100);
-
         int baseLine = 0;
         cv::Size label_size = cv::getTextSize(text, cv::FONT_HERSHEY_SIMPLEX, 0.5, 1, &baseLine);
 
-        int x = obj.rect.x;
-        int y = obj.rect.y - label_size.height - baseLine;
+        __android_log_print(ANDROID_LOG_DEBUG, "ncnn", "Fetched %d 标签", obj.label);
+        int x = static_cast<int>(obj.rect.x);
+        int y = static_cast<int>(obj.rect.y) - label_size.height - baseLine;
         if (y < 0)
             y = 0;
         if (x + label_size.width > rgb.cols)
             x = rgb.cols - label_size.width;
 
-        cv::rectangle(rgb, cv::Rect(cv::Point(x, y), cv::Size(label_size.width, label_size.height + baseLine)), cc, -1);
+        //   cv::rectangle(rgb, cv::Rect(cv::Point(x, y), cv::Size(label_size.width, label_size.height + baseLine)), cc, -1);
         cv::Scalar textcc = (color[0] + color[1] + color[2] >= 381) ? cv::Scalar(0, 0, 0) : cv::Scalar(255, 255, 255);
+        //   cv::putText(rgb, text, cv::Point(x, y + label_size.height), cv::FONT_HERSHEY_SIMPLEX, 0.5, textcc, 1);
 
-        cv::putText(rgb, text, cv::Point(x, y + label_size.height), cv::FONT_HERSHEY_SIMPLEX, 0.5, textcc, 1);
+        // Update cached positions
+
+        bool found = false;
+
+//        for (auto& cached_pos : cached_positions) {
+//            if (cached_pos.label == obj.label) {
+//                cached_pos = {obj.label, obj.rect};
+//                found = true;
+//                break;
+//            }
+//        }
+//        if (cached_positions.size()>8) {
+//            cached_positions.clear();
+//        }
+        if (obj.prob>0.45) {
+            cached_positions.push_back({obj.label, obj.rect});
+        }
     }
+//    // Draw cached positions first 绘制缓存坐标
+//    for (const auto& cached_pos : cached_positions) {
+//        const unsigned char* color = colors[color_index % 19];
+//        color_index++;
+//
+//        cv::Scalar cc(color[0], color[1], color[2]);
+//        cv::rectangle(rgb, cached_pos.rect, cc, 1);
+//
+//        char text[256];
+//        sprintf(text, "%s (cached)", class_names[cached_pos.label]);
+//
+//        int baseLine = 0;
+//        cv::Size label_size = cv::getTextSize(text, cv::FONT_HERSHEY_SIMPLEX, 0.5, 1, &baseLine);
+//
+//        int x = cached_pos.rect.x;
+//        int y = cached_pos.rect.y - label_size.height - baseLine;
+//        if (y < 0)
+//            y = 0;
+//        if (x + label_size.width > rgb.cols)
+//            x = rgb.cols - label_size.width;
+//
+//        cv::rectangle(rgb, cv::Rect(cv::Point(x, y), cv::Size(label_size.width, label_size.height + baseLine)), cc, -1);
+//        cv::Scalar textcc = (color[0] + color[1] + color[2] >= 381) ? cv::Scalar(0, 0, 0) : cv::Scalar(255, 255, 255);
+//       cv::putText(rgb, text, cv::Point(x, y + label_size.height), cv::FONT_HERSHEY_SIMPLEX, 0.5, textcc, 1);
+//    }
+
+
+
+
+    // Cache object frames by class label
+
+
+// 更新缓存逻辑
+//    for (const auto& obj : objects) {
+//        const unsigned char* color = colors[color_index % 19];
+//        color_index++;
+//
+//        cv::Scalar cc(color[0], color[1], color[2]);
+//        cv::rectangle(rgb, obj.rect, cc, 2);
+//
+//        char text[256];
+//        sprintf(text, "%s %.1f%%", class_names[obj.label], obj.prob * 100);
+//        int baseLine = 0;
+//        cv::Size label_size = cv::getTextSize(text, cv::FONT_HERSHEY_SIMPLEX, 0.5, 1, &baseLine);
+//
+//        int x = static_cast<int>(obj.rect.x);
+//        int y = static_cast<int>(obj.rect.y) - label_size.height - baseLine;
+//        if (y < 0) y = 0;
+//        if (x + label_size.width > rgb.cols) x = rgb.cols - label_size.width;
+//
+//        cv::rectangle(rgb, cv::Rect(cv::Point(x, y), cv::Size(label_size.width, label_size.height + baseLine)), cc, -1);
+//        cv::Scalar textcc = (color[0] + color[1] + color[2] >= 381) ? cv::Scalar(0, 0, 0) : cv::Scalar(255, 255, 255);
+//        cv::putText(rgb, text, cv::Point(x, y + label_size.height), cv::FONT_HERSHEY_SIMPLEX, 0.5, textcc, 1);
+//
+//        // 更新缓存，按部位的标签进行区分和存储
+//        auto& cached_list = cached_positions[obj.label];
+//        bool found = false;
+//        for (auto& cached_pos : cached_list) {
+//            if (cached_pos.label == obj.label) { // 匹配相同部位
+//                cached_pos.rect = obj.rect; // 更新识别框位置
+//                found = true;
+//                break;
+//            }
+//        }
+//        if (!found) {
+//            // 未找到匹配的部位，添加新的识别框
+//            cached_list.push_back({obj.label, obj.rect});
+//        }
+//    }
 
     return 0;
 }
